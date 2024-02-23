@@ -1,10 +1,14 @@
+import 'persegi_panjang.dart';
+import 'ultraman.dart';
+import 'godzila.dart';
+
 var arrayMulti = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
 ];
 
-void main() {
+void main(List<String> args) {
   // var angka = 1;
   // while (angka < 10) {
   //   print("ini angka ke ${angka}");
@@ -107,13 +111,45 @@ void main() {
   // var flatmaps = pairs.expand((pair)=> pair);
   // print(flatmaps);
 
-  List<int> myList = [];
+  // List<int> myList = [];
 
-  List<int> list = [1, 2, 3];
+  // List<int> list = [1, 2, 3];
 
-  myList.add(1);
+  // myList.add(1);
 
-  myList.addAll(list);
+  // myList.addAll(list);
 
-  myList.forEach((bilangan) => {print(bilangan)});
+  // myList.forEach((bilangan) => {print(bilangan)});
+
+  // PersegiPanjang kotak;
+  // double luasKotak;
+
+  // kotak = new PersegiPanjang();
+  // kotak.setPanjang(4.0);
+  // kotak.setLebar(6.0);
+
+  // luasKotak = kotak.hitungLuas();
+
+  // print(luasKotak);
+
+  // Ultraman u = Ultraman();
+  // Godzila g = Godzila();
+
+  // u.levelPoint = 8;
+  // g.levelPoint = 4;
+
+  // print('Level point ultraman : ${u.levelPoint}');
+  // print('Level point godzila : ${g.levelPoint}');
+
+  // print('Skill aktif dari ultraman : ' + u.defence());
+  // print('Skill aktif dari godzila : ' + g.attack());
 }
+
+// class PersegiPanjang {
+//   double? panjang;
+//   double? lebar;
+
+//   double hitungLuas() {
+//     return  this.panjang! * lebar!;
+//   }
+// }
