@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
+import '../DrawerScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -6,6 +9,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("SanberApp"),
+        actions: <Widget>[
+          Padding(padding: const EdgeInsets.all(8.0), child: Icon(Icons.search))
+        ],
+      ),
+      drawer: DrawerScreen(),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(16),

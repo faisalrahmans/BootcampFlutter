@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:sanberappflutter/Tugas/Tugas10/Home.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -61,7 +64,11 @@ class LoginScreen extends StatelessWidget {
                     border: Border.all(color: Color(0xff475BD8)),
                     borderRadius: BorderRadius.circular(10)),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Route route =
+                        MaterialPageRoute(builder: (context) => Home());
+                    Navigator.push(context, route);
+                  },
                   child: const Text(
                     "Login",
                     style: TextStyle(

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sanberappflutter/Tugas/Tugas10/HomeScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas10/LoginScreen.dart';
-import 'package:sanberappflutter/Tugas/Tugas9/Telegram.dart';
+// import 'package:sanberappflutter/Tugas/Tugas10/Home.dart';
+// import 'package:sanberappflutter/Tugas/Tugas10/pages/HomeScreen.dart';
+// import 'package:sanberappflutter/Tugas/Tugas10/pages/HomeScreen.dart';
+// import 'package:sanberappflutter/Tugas/Tugas10/pages/setting.dart';
+// import 'package:sanberappflutter/Tugas/Tugas9/Telegram.dart';
 
 void main() {
   runApp(const MyApp());
