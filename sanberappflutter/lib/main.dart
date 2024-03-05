@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sanberappflutter/Tugas/Tugas10/LoginScreen.dart';
+import 'package:sanberappflutter/Tugas/Tugas12/get_data.dart';
 // import 'package:sanberappflutter/Tugas/Tugas10/Home.dart';
 // import 'package:sanberappflutter/Tugas/Tugas10/pages/HomeScreen.dart';
 // import 'package:sanberappflutter/Tugas/Tugas10/pages/HomeScreen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: LoginScreen(),
+      home: GetDataScreen(),
     );
   }
 }
