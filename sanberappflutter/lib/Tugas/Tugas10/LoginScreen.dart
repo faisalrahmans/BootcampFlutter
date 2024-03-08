@@ -1,44 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sanberappflutter/Tugas/Tugas10/Home.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
-
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
-
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  registerSubmit() async {
-    try {
-      await _firebaseAuth.createUserWithEmailAndPassword(
-          email: _emailController.text.toString().trim(),
-          password: _passwordController.text);
-    } catch (e) {
-      print(e);
-      SnackBar(content: Text(e.toString()));
-    }
-  }
-
-  loginSubmit() async {
-    try {
-      _firebaseAuth
-          .signInWithEmailAndPassword(
-              email: _emailController.text, password: _passwordController.text)
-          .then((value) => Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => Home())));
-    } catch (e) {
-      print(e);
-      SnackBar(content: Text(e.toString()));
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +39,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     border: Border.all(color: Color(0xff475BD8)),
                     borderRadius: BorderRadius.circular(10)),
                 child: TextFormField(
-                  controller: _emailController,
                   decoration: InputDecoration.collapsed(hintText: "Email"),
                 ),
               ),
@@ -86,7 +51,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: Border.all(color: Color(0xff475BD8)),
                       borderRadius: BorderRadius.circular(10)),
                   child: TextFormField(
-                    controller: _passwordController,
                     decoration: InputDecoration.collapsed(hintText: "Password"),
                   )),
               const SizedBox(
@@ -101,10 +65,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(10)),
                 child: TextButton(
                   onPressed: () {
-                    // Route route =
-                    //     MaterialPageRoute(builder: (context) => Home());
-                    // Navigator.push(context, route);
-                    loginSubmit();
+                    Route route =
+                        MaterialPageRoute(builder: (context) => Home());
+                    Navigator.push(context, route);
                   },
                   child: const Text(
                     "Login",
