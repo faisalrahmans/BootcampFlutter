@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sanberappflutter/Latihan/Latihan-1/get_data_screen.dart';
-import 'package:sanberappflutter/Tugas/Tugas12/get_data.dart';
+// import 'package:sanberappflutter/Latihan/Latihan-1/get_data_screen.dart';
+// import 'package:sanberappflutter/Latihan/get-x/counter_screen.dart';
+// import 'package:sanberappflutter/Tugas/Tugas12/get_data.dart';
 // import 'package:sanberappflutter/Tugas/Tugas10/LoginScreen.dart';
 import 'package:sanberappflutter/Tugas/Tugas13/LoginScreen.dart';
 // import 'package:sanberappflutter/Tugas/Tugas12/get_data.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: GetDataScreenStateManagement(),
+      home: LoginScreen(),
     );
   }
 }

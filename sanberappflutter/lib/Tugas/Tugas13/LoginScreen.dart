@@ -28,11 +28,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
   loginSubmit() async {
     try {
-      _firebaseAuth
+      await _firebaseAuth
           .signInWithEmailAndPassword(
               email: _emailController.text, password: _passwordController.text)
           .then((value) => Navigator.of(context).pushReplacement(
               MaterialPageRoute(builder: (context) => Home())));
+      print('kena: ${_firebaseAuth.currentUser}');
     } catch (e) {
       print(e);
       SnackBar(content: Text(e.toString()));
